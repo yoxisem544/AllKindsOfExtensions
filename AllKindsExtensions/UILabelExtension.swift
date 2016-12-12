@@ -11,23 +11,28 @@ import UIKit
 
 extension UILabel {
     
-    func changeFontSize(_ size: CGFloat) -> Self {
+    func changeFont(to font: UIFont) -> Self {
+        self.font = font
+        return self
+    }
+    
+    func changeFontSize(to size: CGFloat) -> Self {
         guard let font = self.font else { return self }
         self.font = UIFont.init(name: font.fontName, size: size)
         return self
     }
     
-    func changeTextColor(_ textColor: UIColor) -> Self {
-        self.textColor = textColor
+    func changeTextColor(to color: UIColor) -> Self {
+        self.textColor = color
         return self
     }
     
-    func changeTextAlignment(_ alignment: NSTextAlignment) -> Self {
+    func changeTextAlignment(to alignment: NSTextAlignment) -> Self {
         self.textAlignment = alignment
         return self
     }
     
-    func changeNumberOfLines(_ lines: Int) -> Self {
+    func changeNumberOfLines(to lines: Int) -> Self {
         self.numberOfLines = lines
         return self
     }

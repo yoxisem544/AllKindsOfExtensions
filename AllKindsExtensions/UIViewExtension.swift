@@ -68,15 +68,6 @@ extension UIView {
 		return self.bounds.contains(point)
 	}
 	
-	/// Make a view center horizontally to superview.
-	///
-	/// Only works if the view has a superview
-	func centerHorizontallyInsideSuperview() {
-		if let superview = self.superview {
-			self.center.x = superview.bounds.midX
-		}
-	}
-	
 	/// Get bounds' center x.
 	/// Its different from center.x, because center.x is according to frame
 	var centerXOfBounds: CGFloat {
@@ -89,57 +80,76 @@ extension UIView {
         return bounds.midY
     }
 	
+}
+
+extension UIView {
+
 	/// Move below given point and view
-	func move(_ point: CGFloat, pointBelow view: UIView) {
+	@discardableResult func move(_ point: CGFloat, pointBelow view: UIView) -> Self {
 		self.frame.origin.y = point.point(below: view)
+        return self
 	}
 	
 	/// Move below given point and view
-	func move(_ point: CGFloat, pointTopOf view: UIView) {
+	@discardableResult func move(_ point: CGFloat, pointTopOf view: UIView) -> Self {
 		self.frame.origin.y = view.frame.origin.y - self.bounds.height - point
+        return self
 	}
 	
 	/// Center x inside given view
-	func centerX(inside view: UIView) {
+	@discardableResult func centerX(inside view: UIView) -> Self {
 		self.center.x = view.bounds.midX
+        return self
 	}
 	
 	/// Center y inside given view
-	func centerY(inside view: UIView) {
+	@discardableResult func centerY(inside view: UIView) -> Self {
 		self.center.y = view.bounds.midY
+        return self
 	}
 	
-	func centerX(to view: UIView) {
+	@discardableResult func centerX(to view: UIView) -> Self {
 		self.center.x = view.center.x
+        return self
 	}
 	
-	func centerY(to view: UIView) {
+	@discardableResult func centerY(to view: UIView) -> Self {
 		self.center.y = view.center.y
+        return self
 	}
 	
 	/// Move view in view to its right
 	/// This is used when you want to arrange a view to the right side inside the view.
-	func move(_ point: CGFloat, pointsTrailingToAndInside view: UIView) {
+	@discardableResult func move(_ point: CGFloat, pointsTrailingToAndInside view: UIView) -> Self {
 		self.frame.origin.x = view.bounds.width - self.bounds.width - point
+        return self
 	}
 	
-	func move(_ point: CGFloat, pointsBottomToAndInside view: UIView) {
+	@discardableResult func move(_ point: CGFloat, pointsBottomToAndInside view: UIView) -> Self {
 		self.frame.origin.y = view.bounds.height - self.bounds.height - point
+        return self
 	}
     
-    func move(_ point: CGFloat, pointsTopToAndInside view: UIView) {
+    @discardableResult func move(_ point: CGFloat, pointsTopToAndInside view: UIView) -> Self {
         self.frame.origin.y = point
+        return self
     }
 	
 	/// Move view in view's right
 	/// This is used to move to a view's right, not inside the view.
-	func move(_ point: CGFloat, pointsRightFrom view: UIView) {
+	@discardableResult func move(_ point: CGFloat, pointsRightFrom view: UIView) -> Self {
 		self.frame.origin.x = view.frame.maxX + point
+        return self
 	}
 	
-	func move(_ point: CGFloat, pointsLeftFrom view: UIView) {
+	@discardableResult func move(_ point: CGFloat, pointsLeftFrom view: UIView) -> Self {
 		self.frame.origin.x = view.frame.origin.x - self.bounds.width - point
+        return self
 	}
+    
+}
+
+extension UIView {
 	
 	/// Get super view's view controller
 	var superViewController: UIViewController? {
