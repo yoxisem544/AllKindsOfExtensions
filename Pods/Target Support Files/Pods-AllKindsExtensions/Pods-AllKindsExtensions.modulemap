@@ -1,0 +1,6 @@
+framework module Pods_AllKindsExtensions {
+  umbrella header "Pods-AllKindsExtensions-umbrella.h"
+
+  export *
+  module * { export * }
+}
