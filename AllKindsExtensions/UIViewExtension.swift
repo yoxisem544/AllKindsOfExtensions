@@ -146,4 +146,30 @@ extension UIView {
 		return self.superview?.next as? UIViewController
 	}
     
+    func removeAllSubviews() {
+        subviews.forEach { $0.removeFromSuperview() }
+    }
+    
+    func screenShot(width: CGFloat) -> UIImage? {
+        let imageBounds = CGRect(origin: CGPoint.zero,
+                                 size: CGSize(width: width, height: bounds.size.height * (width / bounds.size.width)))
+        
+        UIGraphicsBeginImageContextWithOptions(imageBounds.size, true, 0)
+        drawHierarchy(in: imageBounds, afterScreenUpdates: true)
+        
+        var image: UIImage?
+        guard let contextImage = UIGraphicsGetImageFromCurrentImageContext() else { return nil }
+        guard let cgImage = contextImage.cgImage else { return nil }
+        
+        image = UIImage(cgImage: cgImage, scale: UIScreen.main.scale, orientation: contextImage.imageOrientation)
+        
+        UIGraphicsEndImageContext()
+        
+        return image
+    }
+    
+    func screenShot() -> UIImage? {
+        return screenShot(width: bounds.width)
+    }
+    
 }
