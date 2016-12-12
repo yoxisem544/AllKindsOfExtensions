@@ -13,8 +13,9 @@ extension UIView {
 	/// Can anchor self to a view
 	///
 	/// A reverse thought of adding a subview
-	func anchor(to view: UIView?) {
+	@discardableResult func anchor(to view: UIView?) -> Self {
 		view?.addSubview(self)
+        return self
 	}
     
     /// Anchor view to a view and below a subview on the view.
@@ -22,8 +23,9 @@ extension UIView {
     /// - Parameters:
     ///   - view: a view to anchor on to
     ///   - below: a subview on the view
-    func anchor(to view: UIView?, below: UIView) {
+    @discardableResult func anchor(to view: UIView?, below: UIView) -> Self {
         view?.insertSubview(self, belowSubview: below)
+        return self
     }
     
     /// Anchor view to a view and above a subview on the view.
@@ -31,8 +33,9 @@ extension UIView {
     /// - Parameters:
     ///   - view: a view to anchor on to
     ///   - above: a subview on the view
-    func anchor(to view: UIView?, above: UIView) {
+    @discardableResult func anchor(to view: UIView?, above: UIView) -> Self {
         view?.insertSubview(self, aboveSubview: above)
+        return self
     }
 	
 	/// Hide view

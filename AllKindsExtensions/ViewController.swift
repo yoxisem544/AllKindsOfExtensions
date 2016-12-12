@@ -24,14 +24,25 @@ class ViewController: UIViewController {
         let label = UILabel()
         
         label
-            .changeFontSize(14)
-            .changeTextColor(.red)
-            .changeNumberOfLines(3)
-            .changeTextAlignment(.center)
+            .anchor(to: view)
+            .changeFontSize(to: 14)
+            .changeTextColor(to: .red)
+            .changeNumberOfLines(to: 3)
+            .changeTextAlignment(to: .center)
             .centerX(inside: view)
             .centerY(inside: view)
         
         
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let a = UIAlertController(title: "hi", message: "hello")
+            .addAction(title: "ok")
+            .addAction(title: "cancel")
+        a.presnet()
     }
 
 }
