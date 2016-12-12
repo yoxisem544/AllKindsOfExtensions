@@ -106,6 +106,24 @@ extension String {
 		let boundingBox = attrString.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, context: nil)
 		return ceil(boundingBox.width)
 	}
+    
+    func bounds(for width: CGFloat, fontSize: CGFloat) -> CGRect {
+        let defaultFont = UIFont.systemFont(ofSize: fontSize)
+        return bounds(for: width, font: defaultFont)
+    }
+    
+    func bounds(for width: CGFloat, font: UIFont) -> CGRect {
+        let nsString = (self as NSString)
+        let size = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)
+        let options: NSStringDrawingOptions = [.usesLineFragmentOrigin]
+        let attributes: [String : Any] = [NSFontAttributeName: font]
+        return nsString.boundingRect(with: size,
+                                     options: options,
+                                     attributes: attributes,
+                                     context: nil)
+    }
+    
+    
 	
 	/// Transform string into secret dot text
 	var dottedString: String {
