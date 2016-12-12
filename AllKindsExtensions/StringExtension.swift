@@ -123,8 +123,6 @@ extension String {
                                      context: nil)
     }
     
-    
-	
 	/// Transform string into secret dot text
 	var dottedString: String {
 		let count = self.characters.count

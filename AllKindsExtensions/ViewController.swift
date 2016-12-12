@@ -32,7 +32,24 @@ class ViewController: UIViewController {
             .centerX(inside: view)
             .centerY(inside: view)
         
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.textColor = .red
+        label.numberOfLines = 3
+        label.textAlignment = .center
+        label.center = view.center
+        view.addSubview(label)
         
+        let labels = [UILabel(),UILabel(),UILabel(),UILabel(),UILabel()]
+        labels.forEach {
+            $0
+            .anchor(to: view)
+            .changeFontSize(to: 14)
+            .changeTextColor(to: .red)
+            .changeNumberOfLines(to: 3)
+            .changeTextAlignment(to: .center)
+            .centerX(inside: view)
+            .centerY(inside: view)
+        }
         
         
     }
