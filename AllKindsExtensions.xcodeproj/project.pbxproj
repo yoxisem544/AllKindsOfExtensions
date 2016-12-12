@@ -33,6 +33,7 @@
 		63E8C37D1DFE804E00AE5727 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E8C37C1DFE804E00AE5727 /* NSObjectExtension.swift */; };
 		63E8C37F1DFE832700AE5727 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E8C37E1DFE832700AE5727 /* UIAlertControllerExtension.swift */; };
 		63E8C3811DFE844500AE5727 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E8C3801DFE844500AE5727 /* UIApplicationExtension.swift */; };
+		63E8C3831DFE8B1000AE5727 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E8C3821DFE8B1000AE5727 /* UITableViewExtension.swift */; };
 		C3B7021E21881364ABF3A567 /* Pods_AllKindsExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A79D3187B50ABFBDF2B8B85 /* Pods_AllKindsExtensions.framework */; };
 		DE6B1F2216F0CF06EB3DCAE9 /* Pods_AllKindsExtensionsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED1D4ED550FC17E09E77BEEA /* Pods_AllKindsExtensionsTests.framework */; };
 		E28846FCF6ADC7437B620703 /* Pods_AllKindsExtensionsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60AAC913072809FB0AB75B17 /* Pods_AllKindsExtensionsUITests.framework */; };
@@ -92,6 +93,7 @@
 		63E8C37C1DFE804E00AE5727 /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		63E8C37E1DFE832700AE5727 /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 		63E8C3801DFE844500AE5727 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
+		63E8C3821DFE8B1000AE5727 /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		6A79D3187B50ABFBDF2B8B85 /* Pods_AllKindsExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllKindsExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72C6F89A2BE8612A6A2B5368 /* Pods-AllKindsExtensionsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllKindsExtensionsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AllKindsExtensionsUITests/Pods-AllKindsExtensionsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EBCF37EFF9D79BBD5BAF18ED /* Pods-AllKindsExtensions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllKindsExtensions.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AllKindsExtensions/Pods-AllKindsExtensions.debug.xcconfig"; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				63E8C3621DFE757D00AE5727 /* UIViewControllerExtension.swift */,
 				63E8C3631DFE757D00AE5727 /* ArrayExtestion.swift */,
 				63E8C3641DFE757D00AE5727 /* UICollectionViewExtension.swift */,
+				63E8C3821DFE8B1000AE5727 /* UITableViewExtension.swift */,
 				63E8C3651DFE757D00AE5727 /* SequenceExtension.swift */,
 				63E8C37C1DFE804E00AE5727 /* NSObjectExtension.swift */,
 				63E8C37E1DFE832700AE5727 /* UIAlertControllerExtension.swift */,
@@ -516,6 +519,7 @@
 				63E8C36A1DFE757D00AE5727 /* DateExtension.swift in Sources */,
 				63E8C36D1DFE757D00AE5727 /* StringExtension.swift in Sources */,
 				63E8C37F1DFE832700AE5727 /* UIAlertControllerExtension.swift in Sources */,
+				63E8C3831DFE8B1000AE5727 /* UITableViewExtension.swift in Sources */,
 				63E8C3761DFE757D00AE5727 /* UICollectionViewExtension.swift in Sources */,
 				63E8C3741DFE757D00AE5727 /* UIViewControllerExtension.swift in Sources */,
 				63E8C3731DFE757D00AE5727 /* UIViewExtension.swift in Sources */,

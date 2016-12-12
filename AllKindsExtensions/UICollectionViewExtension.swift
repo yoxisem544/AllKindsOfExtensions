@@ -23,8 +23,14 @@ extension UICollectionView {
     
     func register<T: UICollectionViewCell>(cellType: T.Type) {
         let className = cellType.className
-        let nib = UINib(nibName: className, bundle: nil)
-        register(nib, forCellWithReuseIdentifier: className)
+        if Bundle.main.path(forResource: className, ofType: "nib") != nil {
+            // register for nib
+            let nib = UINib(nibName: className, bundle: nil)
+            register(nib, forCellWithReuseIdentifier: className)
+        } else {
+            // register for class
+            register(cellType, forCellWithReuseIdentifier: className)
+        }
     }
     
     func register<T: UICollectionViewCell>(cellTypes: [T.Type]) {
@@ -33,8 +39,14 @@ extension UICollectionView {
     
     func register<T: UICollectionReusableView>(reusableViewType: T.Type, of kind: String = UICollectionElementKindSectionHeader) {
         let className = reusableViewType.className
-        let nib = UINib(nibName: className, bundle: nil)
-        register(nib, forSupplementaryViewOfKind: kind, withReuseIdentifier: className)
+        if Bundle.main.path(forResource: className, ofType: "nib") != nil {
+            // register for nib
+            let nib = UINib(nibName: className, bundle: nil)
+            register(nib, forSupplementaryViewOfKind: kind, withReuseIdentifier: className)
+        } else {
+            // register for class
+            register(reusableViewType, forSupplementaryViewOfKind: kind, withReuseIdentifier: className)
+        }
     }
     
     func register<T: UICollectionReusableView>(reusableViewTypes: [T.Type], of kind: String = UICollectionElementKindSectionHeader) {
